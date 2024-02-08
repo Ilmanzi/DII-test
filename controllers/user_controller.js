@@ -21,20 +21,26 @@ class UserController {
             if (!user) {
                 console.log("Username tidak ada")
             }
+            if (password == user.password) {
+                const accessToken = signToken({
+                    id: user.id,
+                    email: user.email,
+                    username: user.username,
+                    role: user.role
+                })
+    
+                res.status(200).json({
+                    id: user.id,
+                    access_token: accessToken,
+                    email: user.email,
+                    role: user.role
+                })
 
-            const accessToken = signToken({
-                id: user.id,
-                email: user.email,
-                username: user.username,
-                role: user.role
-            })
+            } else {
+                console.log("Password salah")
+                next()
+            }
 
-            res.status(200).json({
-                id: user.id,
-                access_token: accessToken,
-                email: user.email,
-                role: user.role
-            })
 
         } catch (err) {
             next(err)
