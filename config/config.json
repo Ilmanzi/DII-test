@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "kacang",
+    "password": "kacang",
+    "database": "DII",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "kacang",
+    "password": "kacang",
+    "database": "DII",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "kacang",
+    "password": "kacang",
+    "database": "DII",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
