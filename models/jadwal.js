@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     dokter_id: DataTypes.INTEGER,
     day: DataTypes.STRING,
     time_start: DataTypes.STRING,
-    time_finsih: DataTypes.STRING,
+    time_finish: DataTypes.STRING,
     quota: DataTypes.INTEGER,
     status: DataTypes.BOOLEAN,
     doctor_name: DataTypes.STRING,

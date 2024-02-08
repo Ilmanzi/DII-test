@@ -18,7 +18,7 @@ module.exports = {
       time_start: {
         type: Sequelize.STRING
       },
-      time_finsih: {
+      time_finish: {
         type: Sequelize.STRING
       },
       quota: {

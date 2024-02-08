@@ -7,7 +7,7 @@ async function authentication (req, res, next) {
         const token = authHeader && authHeader.split(" ")[1];
 
         if (!token) {
-            console.log("Gagal Otentifikasi")
+            res.status(404).json("Token tidak ada")
         }
 
         const data = verifyToken(token);
@@ -30,4 +30,4 @@ async function authentication (req, res, next) {
     }
 }
 
-module.export = authentication
+module.exports = authentication

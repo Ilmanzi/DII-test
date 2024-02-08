@@ -19,7 +19,7 @@ class UserController {
             const { username, password } = req.body
             const user = await User.findOne({ where: { username }})
             if (!user) {
-                console.log("Username tidak ada")
+                res.status(404).json({ message: "Username tidak ditemukan"})
             }
             if (password == user.password) {
                 const accessToken = signToken({
@@ -37,8 +37,7 @@ class UserController {
                 })
 
             } else {
-                console.log("Password salah")
-                next()
+                res.status(404).json({ message: "Password tidak sesuai"})
             }
 
 
