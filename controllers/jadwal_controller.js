@@ -1,4 +1,3 @@
-const { INTEGER } = require("sequelize")
 const getDatesBetween = require("../helper/datebetween")
 const { Dokter } = require("../models")
 const { Jadwal } = require("../models")
